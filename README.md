@@ -1,0 +1,1 @@
+Desenvolvendo do total zero uma aplicação em react-native
