@@ -9,6 +9,7 @@ import { styles } from './style';
 import IllustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { useNavigation } from '@react-navigation/native';
+import { Background} from '../../components/Background';
 export function Signin(){
     const navigation = useNavigation()
 
@@ -17,6 +18,7 @@ export function Signin(){
     }
 
     return(
+        <Background>
         <View style={styles.container}>          
             <Image source={IllustrationImg} 
             style={styles.image}
@@ -35,10 +37,13 @@ export function Signin(){
                 favoritos com seus amigos
             </Text>
 
-            <ButtonIcon            
+          <View style={styles.footer}>
+          <ButtonIcon            
             title="Entrar com Discord"            
             onPress={handleSignin}
             />
-        </View>                
+          </View>
+        </View>   
+        </Background>             
     )
 }

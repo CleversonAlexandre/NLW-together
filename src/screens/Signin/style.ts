@@ -5,7 +5,9 @@ export const styles = StyleSheet.create({
     container:{
         flex:1,
         alignItems: 'center',
-        justifyContent: 'center',        
+        justifyContent: 'center',    
+        
+        
     },
     image:{
        width: '100%',
@@ -31,6 +33,8 @@ export const styles = StyleSheet.create({
         marginBottom: 64,
         fontFamily: theme.fonts.title500,
         lineHeight: 25
-
+    },
+    footer:{
+        paddingHorizontal: 24
     }
 })
