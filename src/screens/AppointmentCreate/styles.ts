@@ -26,6 +26,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         paddingRight: 25,
         overflow: 'hidden',
+        marginBottom: 20
+
     },
     selectBody:{
         flex:1,
@@ -34,7 +36,8 @@ export const styles = StyleSheet.create({
     image:{
         width: 64,
         height: 60,
-        backgroundColor: theme.colors.secondary50,
+        backgroundColor: theme.colors.secondary40,
+        borderColor: theme.colors.secondary50,
         borderWidth: 1,
         borderRadius: 8
     },

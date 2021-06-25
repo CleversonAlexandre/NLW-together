@@ -36,9 +36,9 @@ export function Home(){
         },
         category: '1',
         date: '22/06 às 20:40h',
-        description: 'É hoje que vamos chegar ao challenger sem perder uma partida md10'
-        
-    }
+        description: 'É hoje que vamos chegar ao challenger sem perder uma partida md10'        
+    },
+    
 ]
 
 
@@ -61,12 +61,13 @@ export function Home(){
             <CategorySelect categorySelected={category}              
             setCategory={handleCategorySelect}         
             />
-            <View style={styles.content}>
+           
                 <ListHeader 
                 title="Partidas agendadas"
                 subTitle="Total 6"
-                />                
-                <FlatList
+                />                                
+            
+                 <FlatList
                     data={appointments}
                     keyExtractor={item => item.id}
                     renderItem={({item}) =>(
@@ -75,10 +76,10 @@ export function Home(){
                          />                        
                 )}
                 ItemSeparatorComponent={() => <ListDivider/>}
+                contentContainerStyle={{paddingBottom: 69}}
                 style={styles.matches}
                 showsHorizontalScrollIndicator={false}
                 />
-            </View>
         </Background>
     )
 }

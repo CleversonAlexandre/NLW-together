@@ -23,7 +23,8 @@ export function Guilds({ handleGuildSelect }: Props){
             name: 'PUBG Gaming',
             icon: 'image.png',
             owner: true,
-        }
+        },
+      
     ]
     return(
         <View style={styles.container}>
@@ -37,8 +38,11 @@ export function Guilds({ handleGuildSelect }: Props){
                    />   
                               
                 )}
-                showsHorizontalScrollIndicator={false}
-                ItemSeparatorComponent={() => <ListDivider/>}
+                contentContainerStyle={{paddingBottom: 68,
+                 paddingTop: 103}}
+                 ListHeaderComponent={() => <ListDivider isCentered/>}
+                 ItemSeparatorComponent={() => <ListDivider isCentered/>}
+                 showsHorizontalScrollIndicator={false}                
                 style={styles.guild}
             />
         </View>

@@ -3,18 +3,28 @@ import
     {
      View,
      Text,
-     Image,     
+     Image,   
+     Alert,
+     ActivityIndicator
     } from 'react-native';
 import { styles } from './style';
 import IllustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
-import { useNavigation } from '@react-navigation/native';
 import { Background} from '../../components/Background';
+import {useAuth} from '../../hooks/auth';
+import { theme } from '../../global/styles/theme';
 export function Signin(){
-    const navigation = useNavigation()
+    
 
-    function handleSignin(){
-        navigation.navigate('Home');
+    const {loading, signIn} = useAuth();   
+
+    async function handleSignin (){
+        try {
+         const response = await signIn()   
+    
+        } catch (error) {
+            Alert.alert(error);
+        }
     }
 
     return(
@@ -38,10 +48,13 @@ export function Signin(){
             </Text>
 
           <View style={styles.footer}>
-          <ButtonIcon            
-            title="Entrar com Discord"            
-            onPress={handleSignin}
-            />
+         {
+             loading ? <ActivityIndicator color={theme.colors.primary}/>
+             : <ButtonIcon            
+             title="Entrar com Discord"            
+             onPress={handleSignin}
+             />
+         } 
           </View>
         </View>   
         </Background>             

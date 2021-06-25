@@ -2,7 +2,6 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Home} from '../screens/Home';
-import {Signin} from '../screens/Signin';
 import {AppointmentDetails} from '../screens/AppointmentDetails';
 import {AppointmentCreate} from '../screens/AppointmentCreate';
 import {Guilds} from '../screens/Guilds';
@@ -20,10 +19,7 @@ export function AuthRoutes(){
                 backgroundColor: theme.colors.secondary100
             }
         }}>
-        <Screen
-            name="Signin"
-            component={Signin}
-        />
+      
         <Screen
             name="Home"
             component={Home}

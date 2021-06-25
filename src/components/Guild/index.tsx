@@ -1,5 +1,11 @@
 import React from 'react';
-import {TouchableOpacity, TouchableOpacityProps, View,Text} from 'react-native';
+import {
+    TouchableOpacity,
+    TouchableOpacityProps,
+    View,
+    Text,
+    
+} from 'react-native';
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 import {GuildIcon} from '../GuildIcon';
